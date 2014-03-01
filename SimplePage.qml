@@ -5,10 +5,19 @@ import QtGraphicalEffects 1.0
 Rectangle
 {
     id: simplePage
+
     width: awidth
     height: aheight
     color: "#EAEAEA"
+    signal left(var event)
+    signal right(var event)
+    signal up(var event)
+    signal down(var event)
     signal back()
+    signal bback(var event)
+    signal enter(var event)
+    onBback: back()
+
     property alias imageSource:image.source
     default property alias children : insidePageItem.children
     property alias buttonBarHeight:backContainer.height

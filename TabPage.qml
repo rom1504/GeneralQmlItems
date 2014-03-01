@@ -14,7 +14,14 @@ SimplePage
     property int beginIndex
     function goRight() {listview.goRight()}
     function goLeft() {listview.goLeft()}
+    onLeft:listview.Keys.onLeftPressed(event)
+    onRight:listview.Keys.onRightPressed(event)
 
+    onUp:listview.currentItem.Keys.onUpPressed(event)
+    onDown:listview.currentItem.Keys.onDownPressed(event)
+
+
+    onEnter:listview.currentItem.Keys.onReturnPressed(event)
 
     onTabClicked: {listview.positionViewAtIndex(index,ListView.Center);listview.contentXChanged();}
 

@@ -7,6 +7,10 @@ SimplePage
     property alias pageDelegate: listview.delegate
     property alias listView:listview
     property int beginIndex:0
+
+    onDown:listview.Keys.onDownPressed(event)
+    onUp:listview.Keys.onUpPressed(event)
+    onEnter:listview.currentItem.Keys.onReturnPressed(event)
     ListView
     {
         id:listview
