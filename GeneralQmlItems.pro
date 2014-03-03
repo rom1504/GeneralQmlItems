@@ -18,12 +18,8 @@ OTHER_FILES += \
     Description.qml \
     FixedSizeShadowBorderItem.qml \
     LineInput.qml \
-    ListPage.qml \
     ShadowBorderRectangle.qml \
     ShadowBorderRectangleText.qml \
-    SimplePage.qml \
-    TabItem.qml \
-    TabPage.qml \
     Title.qml \
     TitleImageDescriptionItem.qml \
     Slider.qml
