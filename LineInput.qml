@@ -8,7 +8,7 @@ FocusScope {
 
     signal accepted
     signal returnText(string text)
-    onAccepted: {returnText(input.text);input.text="";}
+    onAccepted: {returnText(input.text);input.text="";focus=false;}
 
     Rectangle {
         anchors.fill: parent
