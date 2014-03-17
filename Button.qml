@@ -5,6 +5,7 @@ Item
     id:container
     width: button.contentWidth +5
     height: button.contentHeight +5
+    property alias font:button.font
     signal clicked
     property alias text:button.text
     Rectangle
@@ -14,7 +15,7 @@ Item
         anchors.fill: parent
         Text
         {
-            font.pointSize: 12
+            font.pointSize: 14
             id: button
         }
     }

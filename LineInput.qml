@@ -9,19 +9,23 @@ FocusScope {
     signal accepted
     signal returnText(string text)
     onAccepted: {returnText(input.text);input.text="";focus=false;}
+    property font font
+    height:rect.height
 
     Rectangle {
-        anchors.fill: parent
+        id:rect
         border.color: "#707070"
         color: "#EAEAEA"
         radius: 4
+        width:parent.width
+        height:hint.contentHeight
 
         Text {
             id: hint
             anchors { fill: parent; leftMargin: 14 }
             verticalAlignment: Text.AlignVCenter
             text: "Enter word"
-            font.pointSize: 12
+            font: wrapper.font
             color: "#707070"
             opacity: input.length ? 0 : 1
         }
@@ -30,7 +34,7 @@ FocusScope {
             id: prefix
             anchors { left: parent.left; leftMargin: 14; verticalCenter: parent.verticalCenter }
             verticalAlignment: Text.AlignVCenter
-            font.pointSize: 12
+            font: wrapper.font
             color: "#707070"
             opacity: !hint.opacity
         }
@@ -40,7 +44,7 @@ FocusScope {
             focus: true
             anchors { left: prefix.right; right: parent.right; top: parent.top; bottom: parent.bottom }
             verticalAlignment: Text.AlignVCenter
-            font.pointSize: 12
+            font: wrapper.font
             color: "#707070"
             onAccepted: wrapper.accepted()
         }
