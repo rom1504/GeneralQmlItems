@@ -22,5 +22,7 @@ OTHER_FILES += \
     ShadowBorderRectangleText.qml \
     Title.qml \
     TitleImageDescriptionItem.qml \
-    Slider.qml
+    Slider.qml \
+    TextButton.qml \
+    TextIconButton.qml
 

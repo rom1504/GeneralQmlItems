@@ -27,7 +27,7 @@ FocusScope {
             text: "Enter word"
             font: wrapper.font
             color: "#707070"
-            opacity: input.length ? 0 : 1
+            opacity: input.length || input.activeFocus ? 0 : 1
         }
 
         Text {

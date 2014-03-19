@@ -9,5 +9,7 @@
         <file>Title.qml</file>
         <file>TitleImageDescriptionItem.qml</file>
         <file>Slider.qml</file>
+        <file>TextButton.qml</file>
+        <file>TextIconButton.qml</file>
     </qresource>
 </RCC>
