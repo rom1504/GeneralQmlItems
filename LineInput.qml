@@ -8,7 +8,7 @@ FocusScope {
 
     signal accepted
     signal returnText(string text)
-    onAccepted: {returnText(input.text);input.text="";focus=false;}
+    onAccepted: {Qt.inputMethod.hide();returnText(input.text);input.text="";focus=false;}
     property font font
     height:rect.height
 

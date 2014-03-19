@@ -12,12 +12,9 @@ Item
     default property alias children : insideItem.children
     signal clicked
     signal pressAndHold
-    signal entered
-    signal exited
-    signal positionChanged
 
-    onEntered: rect.color="#EEEEEE"
-    onExited: rect.color="white"
+    property alias rectColor:rect.color
+    property alias pressed:mouseArea.pressed
 
     function isMouseIn(rect,tolerance)
     {
@@ -37,7 +34,7 @@ Item
             id: rect
             height: insideItem.childrenRect.height +insideItem.y+5
             width: parent.width-(2 * rectShadow.radius)
-            color: "white"
+            color:  "white"
             radius: 2
             antialiasing: true
             border
@@ -76,9 +73,6 @@ Item
         hoverEnabled: true
         onClicked: parent.clicked()
         onPressAndHold:parent.pressAndHold()
-        onEntered: parent.entered()
-        onExited:parent.exited()
-        onPositionChanged: parent.positionChanged()
 
     }
 }

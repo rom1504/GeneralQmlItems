@@ -4,8 +4,15 @@ Item
 {
     id:container
     signal clicked
-    signal entered
-    signal exited
+    property bool pressed:area.pressed
+    property alias mouseX : area.mouseX
+    property alias mouseY : area.mouseY
+
+    function isMouseIn(rect,tolerance)
+    {
+        if(tolerance===undefined) tolerance=0
+        return rect.x-tolerance<mouseX-10 && mouseX-10<rect.x+rect.width+tolerance && rect.y-tolerance<mouseY-10 && mouseY-10<rect.y+rect.height+tolerance;
+    }
 
     MouseArea
     {
@@ -14,7 +21,6 @@ Item
         anchors.fill: parent
         onClicked: container.clicked()
         preventStealing:true
-        onEntered: container.entered()
-        onExited:container.exited()
+        onPressedChanged: container.pressed=pressed
     }
 }
