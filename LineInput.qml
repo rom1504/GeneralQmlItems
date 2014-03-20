@@ -3,8 +3,11 @@ import QtQuick 2.0
 FocusScope {
     id: wrapper
 
+    property alias inputBar:rect
+    property alias text:input.text
     property alias hint: hint.text
     property alias prefix: prefix.text
+    default property alias children : rect.children
 
     signal accepted
     signal returnText(string text)

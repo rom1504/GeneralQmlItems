@@ -24,5 +24,6 @@ OTHER_FILES += \
     TitleImageDescriptionItem.qml \
     Slider.qml \
     TextButton.qml \
-    TextIconButton.qml
+    TextIconButton.qml \
+    AutocompleteLineInput.qml
 

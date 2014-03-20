@@ -11,5 +11,6 @@
         <file>Slider.qml</file>
         <file>TextButton.qml</file>
         <file>TextIconButton.qml</file>
+        <file>AutocompleteLineInput.qml</file>
     </qresource>
 </RCC>
