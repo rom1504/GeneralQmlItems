@@ -9,30 +9,35 @@ Item
     property alias description:text2.text
     default property alias children : insideItem.children
 
-    Title
+    Column
     {
-        id:text1
-    }
-    Image
-    {
-        id:image
-        y:text1.y+text1.height+5
-        sourceSize.height: 150
-        width:100
-        fillMode: Image.PreserveAspectCrop
-    }
-    Description
-    {
-        x:image.width+5
-        y:text1.y+text1.height+5
-        id:text2
-    }
-    Item
-    {
-        x:image.width+5
-        y:text2.y+text2.height+5
-        height:childrenRect.height
-        width:parent.width-x
-        id:insideItem
+        width:parent.width
+        spacing:5
+        Title
+        {
+            id:text1
+        }
+        Row
+        {
+            spacing:5
+            width:parent.width
+            Image
+            {
+                id:image
+                width:parent.width/519*100
+                sourceSize.height: image.width*3/2
+                fillMode: Image.PreserveAspectCrop
+            }
+            Description
+            {
+                id:text2
+            }
+        }
+        Item
+        {
+            height:childrenRect.height
+            width:parent.width-x
+            id:insideItem
+        }
     }
 }
