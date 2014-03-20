@@ -28,16 +28,21 @@ Item
                 sourceSize.height: image.width*3/2
                 fillMode: Image.PreserveAspectCrop
             }
-            Description
+            Column
             {
-                id:text2
+                width:parent.width-image.width
+                spacing:5
+                Description
+                {
+                    id:text2
+                }
+                Item
+                {
+                    height:childrenRect.height
+                    width:text2.width
+                    id:insideItem
+                }
             }
-        }
-        Item
-        {
-            height:childrenRect.height
-            width:parent.width-x
-            id:insideItem
         }
     }
 }
