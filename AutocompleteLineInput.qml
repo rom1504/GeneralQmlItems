@@ -40,8 +40,5 @@ LineInput
           }
       }
 
-      ListView.onAdd: NumberAnimation { target: listView.delegate; property: "height"; duration: 500; easing.type: Easing.OutInQuad}
-      ListView.onRemove:NumberAnimation { target: listView.delegate; property: "height";  duration: 250; easing.type: Easing.InOutQuad}
-
   }
 }
