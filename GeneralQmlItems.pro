@@ -25,5 +25,6 @@ OTHER_FILES += \
     Slider.qml \
     TextButton.qml \
     TextIconButton.qml \
-    AutocompleteLineInput.qml
+    AutocompleteLineInput.qml \
+    RectangleButton.qml
 

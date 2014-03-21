@@ -1,22 +1,16 @@
 import QtQuick 2.0
 
-Button
+RectangleButton
 {
     id:tbutton
     property alias font:button.font
     property alias text:button.text
-    width:rectangle.width+5
-    height:rectangle.height+5
-    Rectangle
+    Text
     {
-        id: rectangle
-        color:tbutton.pressed ? "#DDDDEE" : "white"
+        font.pointSize: 14
+        id: button
         height:button.contentHeight
         width:button.contentWidth
-        Text
-        {
-            font.pointSize: 14
-            id: button
-        }
+        color:"#717171"
     }
 }

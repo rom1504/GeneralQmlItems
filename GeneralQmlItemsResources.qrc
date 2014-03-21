@@ -12,5 +12,6 @@
         <file>TextButton.qml</file>
         <file>TextIconButton.qml</file>
         <file>AutocompleteLineInput.qml</file>
+        <file>RectangleButton.qml</file>
     </qresource>
 </RCC>
