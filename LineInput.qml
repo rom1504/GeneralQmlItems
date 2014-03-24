@@ -50,6 +50,7 @@ FocusScope {
             font: wrapper.font
             color: "#707070"
             onAccepted: wrapper.accepted()
+            inputMethodHints:Qt.ImhNoPredictiveText|Qt.ImhPreferLowercase|Qt.ImhNoAutoUppercase
         }
     }
 }
