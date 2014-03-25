@@ -21,7 +21,7 @@ FocusScope {
         color: "#EAEAEA"
         radius: 4
         width:parent.width
-        height:hint.contentHeight
+        height:hint.contentHeight+20
 
         Text {
             id: hint

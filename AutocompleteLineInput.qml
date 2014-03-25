@@ -14,7 +14,7 @@ LineInput
       z:100
       id: listView
       width: parent.width
-      height: 300
+      height: 320
       anchors.top: inputBar.bottom
       clip:true
 
@@ -22,14 +22,14 @@ LineInput
       delegate: Rectangle{
           id: delegateItem
           width: parent.width
-          height:  text.contentHeight
+          height:  text.contentHeight+10
           border.color: delegateItemBorderColor
           color: delegateItemColor
           Text {
               id:text
-              anchors.leftMargin: 5
+              anchors.verticalCenter: parent.verticalCenter
               text: display
-              font.pointSize: 18
+              font.pointSize: 16
           }
           MouseArea{
               anchors.fill:  parent
