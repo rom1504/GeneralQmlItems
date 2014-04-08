@@ -1,6 +1,6 @@
 import QtQuick 2.0
 
-ShadowBorderRectangle
+ShadowBorderRectangleButton
 {
     property alias text:insideText.text
     Text

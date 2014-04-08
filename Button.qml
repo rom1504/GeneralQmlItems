@@ -4,9 +4,11 @@ Item
 {
     id:container
     signal clicked
+    signal pressAndHold
     property bool pressed:area.pressed
     property alias mouseX : area.mouseX
     property alias mouseY : area.mouseY
+
 
     function isMouseIn(rect,tolerance)
     {
@@ -20,7 +22,8 @@ Item
         id:area
         anchors.fill: parent
         onClicked: container.clicked()
-        preventStealing:true
         onPressedChanged: container.pressed=pressed
+
+        onPressAndHold:parent.pressAndHold()
     }
 }

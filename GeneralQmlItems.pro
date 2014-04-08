@@ -26,5 +26,6 @@ OTHER_FILES += \
     TextButton.qml \
     TextIconButton.qml \
     AutocompleteLineInput.qml \
-    RectangleButton.qml
+    RectangleButton.qml \
+    ShadowBorderRectangleButton.qml
 
