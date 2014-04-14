@@ -14,5 +14,6 @@
         <file>AutocompleteLineInput.qml</file>
         <file>RectangleButton.qml</file>
         <file>ShadowBorderRectangleButton.qml</file>
+        <file>ImageButton.qml</file>
     </qresource>
 </RCC>
