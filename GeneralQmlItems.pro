@@ -8,7 +8,6 @@ QT       -= core gui
 
 TARGET = GeneralQmlItems
 TEMPLATE = lib
-CONFIG += staticlib
 
 RESOURCES += \
     GeneralQmlItemsResources.qrc
