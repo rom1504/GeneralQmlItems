@@ -5,8 +5,9 @@ import QtGraphicalEffects 1.0
 Item
 {
     id:root
-    width: parent.width
+    width:parent.width
     height:container.height
+    property double defaultHeight:container.height
     default property alias children : insideItem.children
 
     property alias rectColor:rect.color

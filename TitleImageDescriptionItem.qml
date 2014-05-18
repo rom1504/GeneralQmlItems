@@ -2,12 +2,14 @@ import QtQuick 2.0
 
 Item
 {
+    property double maximumDescriptionHeight:-1
     width:parent.width
     height:childrenRect.height
     property alias title:text1.text
     property alias imageSource:image.source
     property alias description:text2.text
     default property alias children : insideItem.children
+    property bool forceDescriptionHeight:false
 
     Column
     {
@@ -34,7 +36,9 @@ Item
                 spacing:5
                 Description
                 {
+                    maximumHeight:maximumDescriptionHeight
                     id:text2
+                    forceHeight: forceDescriptionHeight
                 }
                 Item
                 {
