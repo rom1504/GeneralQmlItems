@@ -2,7 +2,6 @@
     <qresource prefix="/GeneralQmlItems">
         <file>Button.qml</file>
         <file>Description.qml</file>
-        <file>FixedSizeShadowBorderItem.qml</file>
         <file>LineInput.qml</file>
         <file>ShadowBorderRectangle.qml</file>
         <file>ShadowBorderRectangleText.qml</file>

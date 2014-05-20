@@ -15,7 +15,6 @@ RESOURCES += \
 OTHER_FILES += \
     Button.qml \
     Description.qml \
-    FixedSizeShadowBorderItem.qml \
     LineInput.qml \
     ShadowBorderRectangle.qml \
     ShadowBorderRectangleText.qml \

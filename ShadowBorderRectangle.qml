@@ -6,11 +6,13 @@ Item
 {
     id:root
     width:parent.width
-    height:container.height
-    property double defaultHeight:container.height
+    height:fixedSize ? parent.height : container.height
+    property double defaultHeight:fixedSize ? parent.height : container.height
     default property alias children : insideItem.children
 
     property alias rectColor:rect.color
+
+    property bool fixedSize:false
 
 
     Item
@@ -18,12 +20,12 @@ Item
         id: container
         anchors.centerIn: parent
         width:  parent.width
-        height: rect.height + (2 * rectShadow.radius)
+        height: fixedSize ? parent.height : rect.height + (2 * rectShadow.radius)
 
         Rectangle
         {
             id: rect
-            height: insideItem.childrenRect.height +insideItem.y+5
+            height: fixedSize ? parent.height-(2 * rectShadow.radius) : insideItem.childrenRect.height +insideItem.y+5
             width: parent.width-(2 * rectShadow.radius)
             color:  "white"
             radius: 2
